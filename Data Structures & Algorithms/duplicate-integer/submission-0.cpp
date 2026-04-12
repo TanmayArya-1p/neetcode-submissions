@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        set<int> s;
+        for(auto &i : nums) {
+            if(s.find(i) != s.end()) return true;
+            s.insert(i);
+        }
+        return false;
+    }
+};
